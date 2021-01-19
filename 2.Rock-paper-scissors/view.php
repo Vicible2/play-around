@@ -51,9 +51,9 @@
 				<input type="checkbox" name="name" id="scissors" value="scissors">Scissors</input>
 
 
-				<p> rock paper or scissors with php</p>
-
+				<br>
 				<button type="submit" name="submit">Play!</button>
+				<h2> <?php echo $game->result ?> </h2>
 			</div>
 		</form>
 	</div>
