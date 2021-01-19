@@ -24,7 +24,7 @@ function whatIsHappening() {
 //whatIsHappening();
 
 // Load you classes
-require_once 'classes/RockPaperScissors.php.php';
+require_once 'classes/RockPaperScissors.php';
 
 // Start the game
 $game = new RockPaperScissors();
