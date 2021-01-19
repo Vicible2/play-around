@@ -8,5 +8,19 @@
 	<title>Casino royale - rock, paper, scissors</title>
 </head>
 <body>
+
+
+<!-- TODO: Form with following items:
+
+Your pick:
+Rock, paper, scissors (buttons/dropdown/...)
+yourScore
+
+Computer pick: (empty until play button is submitted)
+computerScore
+
+submit/play button
+
+You win / you Lose. -->
 </body>
 </html>

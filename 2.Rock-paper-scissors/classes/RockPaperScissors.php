@@ -3,7 +3,7 @@
 class RockPaperScissors
 {
 
-    //Variables
+    //Variables needed
     public $yourPick;
     public $computerPick;
     public $yourScore;
