@@ -41,7 +41,7 @@
 				<H3>Your pick:
 					<?php 
 						if(!empty($_POST['name'])){
-						echo $_POST['name'];
+						echo ucfirst($_POST['name']);
 						}
 					 ?>
 				</H3>
