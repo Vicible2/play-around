@@ -17,9 +17,9 @@
 			<H1>Rock, paper, scissors</H1>
 		</div>
 		<div class="scoreboard">
-			<H2>Your Score:</H2>
+			<H3>Your Score:</H3>
 			<!-- <p> php tag with yourScore</p> -->
-			<H2>Computer Score:</H2>
+			<H3 	>Computer Score:</H3>
 			<!-- <p>php tag with computerScure</p> -->
 		</div>
 
@@ -35,7 +35,10 @@
 				<input type="checkbox" name="name" id="scissors" value="scissors">
 				<label for="scissors">Scissors</label>
 
+				<h3>Computer Pick:</h3>
+				<p> rock paper or scissors with php</p>
 
+				<button type="submit">Play!</button>
 			</div>
 		</form>
 	</div>
