@@ -8,6 +8,21 @@ ini_set('display_errors', '1');
 ini_set('display_startup_errors', '1');
 error_reporting(E_ALL);
 
+
+function whatIsHappening() {
+    
+    echo '<h2>$_POST</h2>';
+    echo "<pre>";
+    var_dump($_POST);
+    echo "</pre>";
+   
+    echo '<h2>$_SESSION</h2>';
+    echo "<pre>";
+    var_dump($_SESSION);
+    echo "</pre>";   
+}
+//whatIsHappening();
+
 // Load you classes
 require_once 'classes/RockPaperScissors.php.php';
 
