@@ -19,9 +19,9 @@
 		</div>
 		<div class="scoreboard">
 			<H3>Your Score:</H3>
-			<!-- <p> php tag with yourScore</p> -->
+			<p> <?php echo $game->yourScore ?></p>
 			<H3>Computer Score:</H3>
-			<!-- <p>php tag with computerScure</p> -->
+			<p> <?php echo $game->computerScore ?></p>
 		</div>
 
 
