@@ -8,6 +8,9 @@ ini_set('display_errors', '1');
 ini_set('display_startup_errors', '1');
 error_reporting(E_ALL);
 
+// Load you classes
+require_once 'classes/RockPaperScissors.php';
+
 
 function whatIsHappening() {
     
@@ -21,13 +24,14 @@ function whatIsHappening() {
     var_dump($_SESSION);
     echo "</pre>";   
 }
-//whatIsHappening();
+whatIsHappening();
 
-// Load you classes
-require_once 'classes/RockPaperScissors.php';
 
 // Start the game
 $game = new RockPaperScissors();
 $game->run();
+
+
+
 
 require 'view.php';

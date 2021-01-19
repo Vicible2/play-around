@@ -14,12 +14,13 @@
 	<div class="game">
 
 		<div class="title">
+			<hr>
 			<H1>Rock, paper, scissors</H1>
 		</div>
 		<div class="scoreboard">
 			<H3>Your Score:</H3>
 			<!-- <p> php tag with yourScore</p> -->
-			<H3 	>Computer Score:</H3>
+			<H3>Computer Score:</H3>
 			<!-- <p>php tag with computerScure</p> -->
 		</div>
 
@@ -27,18 +28,32 @@
 		<form action="index.php" method="post">
 			<div class="gameField">
 
-				<H3>Your pick:</H3>
-				<input type="checkbox" name="name" id="rock" value="rock">
-				<label for="rock">Rock</label>
-				<input type="checkbox" name="name" id="paper" value="paper">
-				<label for="paper">Paper</label>
-				<input type="checkbox" name="name" id="scissors" value="scissors">
-				<label for="scissors">Scissors</label>
 
-				<h3>Computer Pick:</h3>
+				<h3>Computer Pick:
+					<?php 
+						if(!empty($_POST['name'])){
+						echo $game->computerPick;
+						}
+					?>
+				</h3>
+
+
+				<H3>Your pick:
+					<?php 
+						if(!empty($_POST['name'])){
+						echo $_POST['name'];
+						}
+					 ?>
+				</H3>
+
+				<input type="checkbox" name="name" id="rock" value="rock">Rock</input>
+				<input type="checkbox" name="name" id="paper" value="paper">Paper </input>
+				<input type="checkbox" name="name" id="scissors" value="scissors">Scissors</input>
+
+
 				<p> rock paper or scissors with php</p>
 
-				<button type="submit">Play!</button>
+				<button type="submit" name="submit">Play!</button>
 			</div>
 		</form>
 	</div>
