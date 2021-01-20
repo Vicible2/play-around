@@ -29,13 +29,13 @@ class RockPaperScissors
             if(!empty($_SESSION['yourScore'])){
                 $this->yourScore = $_SESSION['yourScore'];
             }
-            //TODO: Display score
+           
 
 
         };
-        
+         //TODO: Display score
         $_SESSION['computerScore'] = $this->computerScore;
-        $_SESSION['yourSCore'] = $this->yourScore;
+        $_SESSION['yourScore'] = $this->yourScore;
     }
 
     public function computerChoice()
