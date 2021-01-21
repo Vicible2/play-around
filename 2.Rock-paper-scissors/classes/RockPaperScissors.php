@@ -14,6 +14,8 @@ class RockPaperScissors
     {
         // This function functions as your game "engine"
         // Now it's on to you to take the steering wheel and determine how it will work
+
+         
         if(!empty($_POST['name'])) {
             //Player pick
             $this->yourPick = $_POST['name'];
@@ -22,7 +24,7 @@ class RockPaperScissors
             $this->computerChoice();
             //Calculate win or loss
             $this->gameResult();
-
+           
             if(!empty($_SESSION['computerScore'])){
                 $this->computerScore = $_SESSION['computerScore'];
             }
@@ -30,10 +32,8 @@ class RockPaperScissors
                 $this->yourScore = $_SESSION['yourScore'];
             }
            
-
-
         };
-         //TODO: Display score
+        //TODO: Display score
         $_SESSION['computerScore'] = $this->computerScore;
         $_SESSION['yourScore'] = $this->yourScore;
     }
@@ -48,43 +48,43 @@ class RockPaperScissors
 
         if ($_POST['name'] === "rock") {
             // == because the value is the same but not the the exact same variable
-            if ($this->computerPick == 'paper') {
+            if ($this->computerPick == 'Paper') {
                 $this->result = "You Lost!";
                 $_SESSION['computerScore']++;
             }
-            if ($this->computerPick == 'rock') {
+            if ($this->computerPick == 'Rock') {
                 $this->result = "DRAW!";
             }
-            if ($this->computerPick == 'scissors') {
+            if ($this->computerPick == 'Scissors') {
                 $this->result = "You Won!";
                 $_SESSION['yourScore']++;
             }
         }
 
         if ($_POST['name'] === "paper") {
-            if ($this->computerPick == 'paper') {
+            if ($this->computerPick == 'Paper') {
                 $this->result = "DRAW!";
             }
-            if ($this->computerPick == 'rock') {
+            if ($this->computerPick == 'Rock') {
                 $this->result = "You Won!";
                 $_SESSION['computerScore']++;
             }
-            if ($this->computerPick == 'scissors') {
+            if ($this->computerPick == 'Scissors') {
                 $this->result = "You Lost!";
                 $_SESSION['yourScore']++;
             }
         }
 
         if ($_POST['name'] === "scissors") {
-            if ($this->computerPick == 'paper') {
+            if ($this->computerPick == 'Paper') {
                 $this->result = "You Won!";
                 $_SESSION['yourScore']++;
             }
-            if ($this->computerPick == 'rock') {
+            if ($this->computerPick == 'Rock') {
                 $this->result = "You Lost!";
                 $_SESSION['computerScore']++;
             }
-            if ($this->computerPick == 'scissors') {
+            if ($this->computerPick == 'Scissors') {
                 $this->result = "DRAW!";
             }
         }
