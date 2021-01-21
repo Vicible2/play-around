@@ -8,7 +8,7 @@ ini_set('display_errors', '1');
 ini_set('display_startup_errors', '1');
 error_reporting(E_ALL);
 
-// Load you classes
+// Load your classes
 require_once 'classes/RockPaperScissors.php';
 
 
