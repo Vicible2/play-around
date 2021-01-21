@@ -73,25 +73,25 @@ class GuessingGame
 
     public function higher()
     {
-        $this->result = "Aim a little bit higher!";
+        $this->result = "Up up up the stairs we go!";
     }
 
     public function lower()
     {
-        $this->result = "Aim a little bit lower!";
+        $this->result = "Get down on it, get down on it!";
     }
 
     public function playerWins()
     {
         // TODO: show a winner message (mention how many tries were needed)
-        $this->result = "<h4>You won!</h4><br><br><p>The secret number was indeed: {$this->secretNumber}</p>";
+        $this->result = "<h4>Winner winner chicken dinner!</h4><br><br><p>The hidden number was : {$this->secretNumber}</p>";
         $this->reset();
     }
 
     public function playerLoses()
     {
         // TODO: show a lost message (mention the secret number)
-        $this->result = "<h4>You lost!</h4><br><br><p>The secret number was: {$this->secretNumber}</p>";
+        $this->result = "<h4>Even though you lost, I'm still proud of you!</h4><br><br><p>The hidden number was: {$this->secretNumber}</p>";
         $this->reset();
     }
 
