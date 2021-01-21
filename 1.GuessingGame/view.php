@@ -11,6 +11,7 @@
 
 <div class="title">
     <h1>Riddles in the dark!</h1>
+    <h3>Guess the random number between 1 - 20</h3>
 </div>
 <br><br>
 <div class="guessInput">
