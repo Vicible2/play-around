@@ -10,20 +10,20 @@
 <body>
 
 <div class="title">
-    <h1>Guess the Number!</h1>
+    <h1>Riddles in the dark!</h1>
 </div>
 <br><br>
 <div class="guessInput">
 
     <form action="index.php" method="POST">
         Attempt: <?php echo $_SESSION['attempts']; ?> <br><br>
-        You have guessed: <?php if(isset($_POST['guess'])){echo $_POST['guess'];}?> <br>
+        You guessed: <?php if(isset($_POST['guess'])){echo $_POST['guess'];}?> <br>
         <p></p>
         <div class="form-group col-md-6">
-            <label for="guess">guess:</label>
+            <label for="guess">Go ahead, guess:</label>
             <input type="text" name="guess" id="guess" class="form-control" value="<?php echo isset($_POST['guess']) ? $_POST['guess'] : '' ?>">
         </div>
-        <button type="submit"><?php if(($game->attempts == 5)){echo "Try Again!"; } else {echo "Try your luck";}?></button>
+        <button type="submit"><?php if(($game->attempts == 5)){echo "Guess again my precious"; } else {echo "Guess my precious, guess!";}?></button>
     </form>
     <p>Result: <?php if(!empty($game->result)){ echo $game->result;} ?></p>
 </div>

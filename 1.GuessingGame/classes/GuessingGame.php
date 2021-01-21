@@ -35,7 +35,7 @@ class GuessingGame
         // TODO: check if a secret number has been generated yet
         if (empty($this->secretNumber)) {
             
-            $this->generatSecretNumber();
+            $this->generateHiddenNumber();
         }
         // --> if not, generate one and store it in the session (so it can be kept when the user submits the form)
         // TODO: check if the player has submitted a guess
@@ -64,7 +64,7 @@ class GuessingGame
         // TODO as an extra: if a reset button was clicked, use the reset function to set up a new game
     }
 
-    public function generatSecretNumber()
+    public function generateHiddenNumber()
     {
         $this->secretNumber = rand(1, 20);
         $_SESSION['secretNumber'] = $this->secretNumber;
@@ -91,7 +91,9 @@ class GuessingGame
     public function playerLoses()
     {
         // TODO: show a lost message (mention the secret number)
-        $this->result = "<h4>Even though you lost, I'm still proud of you!</h4><br><br><p>The hidden number was: {$this->secretNumber}</p>";
+        $this->result = "
+        <h4>One does not simple guess the right number</h4><br><p>The hidden number was: {$this->secretNumber}</p>
+        <h4>Even though you lost, I'm still proud of you!</h4><br>";
         $this->reset();
     }
 
@@ -105,6 +107,6 @@ class GuessingGame
         $this->attempts = 1;
 
         // Creating a new secret number
-        $this->generatSecretNumber();
+        $this->generateHiddenNumber();
     }
 }
